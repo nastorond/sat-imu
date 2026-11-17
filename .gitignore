@@ -1,0 +1,42 @@
+# --- OS / 에디터 ---
+.DS_Store
+*.swp
+*~
+.idea/
+
+# --- 펌웨어 빌드 산출물 ---
+firmware/build/
+firmware/Debug/
+firmware/Release/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+
+# --- clangd / CMake ---
+.cache/
+compile_commands.json
+CMakeUserPresets.json
+CMakeFiles/
+CMakeCache.txt
+
+# --- 시험 / 커버리지 ---
+tests/build/
+*.gcda
+*.gcno
+*.info
+coverage/
+
+# --- Python (지상국, 분석 스크립트) ---
+__pycache__/
+*.pyc
+.venv/
+
+# --- 로그 / 수집 데이터 ---
+*.log
+data/raw/
+
+# --- 개인 설정 ---
+.env
