@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -109,6 +109,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  //HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	  const char msg[] = "hello\r\n";
+	  if (HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen(msg), 100) == HAL_OK) {
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	  }
+	  
+	  HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
